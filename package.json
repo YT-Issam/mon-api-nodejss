@@ -2,11 +2,11 @@
   "name": "mon-api-nodejs",
   "version": "1.0.0",
   "scripts": {
-    "dev": "cross-env NODE_ENV=developpement nodemon app.js",
+    "dev": "cross-env NODE_ENV=development nodemon app.js",
     "prod": "cross-env NODE_ENV=production nodemon app.js",
     "start": "npm run lint && npm run dev",
     "lint": "eslint . --fix",
-    "fixtures": "node fixtures/index.js"
+    "fixtures": "node fixtures/index.fixtures.js"
   },
   "dependencies": {
     "bcrypt": "^6.0.0",

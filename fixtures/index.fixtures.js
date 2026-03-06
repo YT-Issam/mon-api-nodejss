@@ -16,4 +16,3 @@ const loadFixtures = async () => {
 };
 
 loadFixtures();
-
