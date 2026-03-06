@@ -13,7 +13,7 @@ router.get("/", async (req, res) => {
 
     try {
         const [posts, count] = await Promise.all([
-            Post.find()
+            Post.find({ status: "Publish" })
                 .sort({ "createdAt": -1 })
                 .populate({
                     path: "_userId",
