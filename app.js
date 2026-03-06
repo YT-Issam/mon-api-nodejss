@@ -11,11 +11,11 @@ mongoose.connect(process.env.DATABASE_URL)
     })
     .catch(err => console.error(err));
 
-const indexRouter = require("./routes/index");
-const authRouter = require("./routes/auth");
-const usersRouter = require("./routes/users");
-const postsRouter = require("./routes/posts");
-const commentsRouter = require("./routes/comments");
+const indexRouter = require("./routes/index.routes");
+const authRouter = require("./routes/auth.routes");
+const usersRouter = require("./routes/users.routes");
+const postsRouter = require("./routes/posts.routes");
+const commentsRouter = require("./routes/comments.routes");
 
 app.use(express.json());
 

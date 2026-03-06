@@ -1,5 +1,6 @@
-const Post = require("../models/Post");
 const { faker } = require("@faker-js/faker");
+
+const Post = require("../models/posts.models");
 
 const seedPosts = async (users) => {
     await Post.deleteMany();

@@ -1,8 +1,8 @@
 require("dotenv").config();
 const mongoose = require("mongoose");
 
-const usersSeed = require("../fixtures/users.seed");
-const postsSeed = require("../fixtures/posts.seed");
+const usersSeed = require("./users.fixtures");
+const postsSeed = require("./posts.fixtures");
 
 const loadFixtures = async () => {
     await mongoose.connect(process.env.DATABASE_URL);

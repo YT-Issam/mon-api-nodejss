@@ -1,6 +1,7 @@
-const User = require("../models/User");
 const { faker } = require("@faker-js/faker");
 const bcrypt = require("bcrypt");
+
+const User = require("../models/users.models");
 
 const seedUsers = async () => {
     await User.deleteMany();

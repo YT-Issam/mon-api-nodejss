@@ -4,7 +4,7 @@ const router = express.Router();
 const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
 
-const User = require("../models/User");
+const User = require("../models/users.models");
 
 router.post("/register", async (req, res) => {
     const { username, email, password } = req.body;
@@ -91,6 +91,11 @@ router.post("/login", async (req, res) => {
             success: true,
             message: "User authenticated successfully",
             accessToken: accessToken,
+            user: {
+                _id: user._id,
+                username: user.username,
+                email: user.email,
+            },
         });
 
     } catch (err) {
