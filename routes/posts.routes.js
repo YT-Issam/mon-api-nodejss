@@ -9,7 +9,7 @@ const Comment = require("../models/comments.models");
 router.get("/", async (req, res) => {
     const page = parseInt(req.query.page) || 1;
     const size = parseInt(req.query.size) || 10;
-    const offset = (page - 1) * size;
+    const offset = (page - 1) * siz;
 
     try {
         const [posts, count] = await Promise.all([
