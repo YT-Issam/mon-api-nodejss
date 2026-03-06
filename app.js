@@ -18,7 +18,12 @@ const usersRouter = require("./routes/users.routes");
 const postsRouter = require("./routes/posts.routes");
 const commentsRouter = require("./routes/comments.routes");
 
-app.use(logger("dev"));
+if (process.env.NODE_ENV === "development") {
+    app.use(logger("dev"));
+}
+
+
+
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
